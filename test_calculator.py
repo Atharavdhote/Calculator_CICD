@@ -15,8 +15,8 @@ class TestCalculator(unittest.TestCase):
             self.assertEqual(divide(10,5),2.0)
 
     def test_division_by_zero(self):
-                self.assertRaises(ValueError)
-                divide(10,0)
+        with self.assertRaises(ValueError):
+            divide(10, 0)
 
 if __name__ == "__main__":
        unittest.main()
